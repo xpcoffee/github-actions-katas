@@ -1,8 +1,14 @@
 name: continuous integration
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 env:
-  dockerhub_username: ${{ secrets.DOCKER_USERNAME }}
-  dockerhub_password: ${{ secrets.DOCKERHUB_ACCESS_KEY }}
+  docker_username: ${{ secrets.DOCKER_USERNAME }}
+  docker_password: ${{ secrets.DOCKERHUB_ACCESS_KEY }}
 jobs:
   clone:
     runs-on: ubuntu-latest
