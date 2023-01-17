@@ -58,8 +58,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ env.dockerh_username }}
-          password: ${{ env.dockerh_password }}
+          username: ${{ env.docker_username }}
+          password: ${{ env.docker_password }}
       - name: download # could be optimized to only tests
         uses: actions/download-artifact@v3
         with:
