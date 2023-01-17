@@ -1,8 +1,9 @@
 name: continuous integration
 on:
+  pushed:
+    branches:
+      - main
   pull_request:
-    types:
-      - opened
     branches:
       - main
 env:
