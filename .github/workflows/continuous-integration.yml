@@ -1,6 +1,6 @@
 name: continuous integration
 on:
-  pushed:
+  push:
     branches:
       - main
   pull_request:
